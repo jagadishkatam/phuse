@@ -118,7 +118,13 @@ mymap <- leaflet(locations) |>
     color = ~ifelse(str_detect(conference,'Pharma'),'blue','red')
   ) |> 
   addControl(
-    "<h4 style='color: darkblue; text-align=center; '>Map of Phuse and PharmaSUG Conferences in the Calender 2025</h4>", 
+    "<h4 style='text-align: center;'>
+      <span style='color: black;'>Map of </span>
+      <span style='color: red;'>PhUSE</span>
+      <span style='color: black;'> and </span>
+      <span style='color: blue;'>PharmaSUG</span>
+      <span style='color: black;'> Conferences in the Calender Year of 2025</span>
+    </h4>",
     position = "topright"
   )
 
