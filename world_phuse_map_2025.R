@@ -19,7 +19,8 @@ locations <- data.frame(
            'Hyderabad',
            'Tokyo',
            'San Diego',
-           'Bengaluru'),
+           'Bengaluru',
+           'Boston'),
   
   description = c("Single Day Event",
                   "Single Day Event",
@@ -33,6 +34,7 @@ locations <- data.frame(
                   "Single Day Event at Novartis",
                   "Single Day Event",
                   "US Conference",
+                  "Single Day Event",
                   "Single Day Event"),
   
   country = c('India',
@@ -47,7 +49,8 @@ locations <- data.frame(
               "India",
               "Japan",
               'United States of America',
-              'India'),
+              'India',
+              'United States of America'),
   
   longitude = c(73.6901,
                -0.331237,
@@ -61,7 +64,8 @@ locations <- data.frame(
                78.379903,
                139.67829,
                -117.8874,
-               77.2002),
+               77.2002,
+               -71.1928),
   
   latitude = c(18.6479,
                 51.448003,
@@ -75,7 +79,8 @@ locations <- data.frame(
                17.436074,
                35.72087,
                33.2582,
-               13.2293),
+               13.2293,
+               42.4080),
   
   date = c("22 Mar 2025",
            "06 Mar 2025",
@@ -89,7 +94,8 @@ locations <- data.frame(
            "12 Apr 2025",
            "07 Apr 2025",
            "1-4 Jun 2025",
-           "22 Nov 2025"),
+           "22 Nov 2025",
+           NA),
   
   conference = c("Phuse",
                   "Phuse",
@@ -103,7 +109,8 @@ locations <- data.frame(
                   "PharmaSUG",
                  "PharmaSUG",
                  "PharmaSUG",
-                 "Phuse")
+                 "Phuse",
+                 "PharmaSUG")
   ) 
 
 popupContent <- ~paste0(
