@@ -120,7 +120,7 @@ mymap <- leaflet(locations) |>
   addControl(
     "<h4 style='text-align: center;'>
       <span style='color: black;'>Map of </span>
-      <span style='color: red;'>PhUSE</span>
+      <span style='color: red;'>PHUSE</span>
       <span style='color: black;'> and </span>
       <span style='color: blue;'>PharmaSUG</span>
       <span style='color: black;'> Conferences in the Calender Year of 2025</span>
