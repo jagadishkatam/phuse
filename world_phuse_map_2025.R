@@ -16,7 +16,9 @@ locations <- data.frame(
            'Hyderabad',
            'Chennai',
            'Hamburg',
-           'Hyderabad'),
+           'Hyderabad',
+           'Tokyo',
+           'San Diego'),
   
   description = c("Single Day Event",
                   "Single Day Event",
@@ -27,7 +29,9 @@ locations <- data.frame(
                   "Single Day Event",
                   "Single Day Event",
                   "EU Connect",
-                  "Single Day Event at Novartis"),
+                  "Single Day Event at Novartis",
+                  "Single Day Event",
+                  "US Conference"),
   
   country = c('India',
               'United Kingdom',
@@ -38,7 +42,9 @@ locations <- data.frame(
               'India',
               'India',
               "Germany",
-              "India"),
+              "India",
+              "Japan",
+              'United States of America'),
   
   longitude = c(73.6901,
                -0.331237,
@@ -49,7 +55,9 @@ locations <- data.frame(
                78.381384,
                79.8802,
                9.997585,
-               78.379903),
+               78.379903,
+               139.67829,
+               -117.8874),
   
   latitude = c(18.6479,
                 51.448003,
@@ -60,7 +68,9 @@ locations <- data.frame(
                17.433113,
                13.3355,
                53.570917,
-               17.436074),
+               17.436074,
+               35.72087,
+               33.2582),
   
   date = c("22 Mar 2025",
            "06 Mar 2025",
@@ -71,7 +81,9 @@ locations <- data.frame(
            "21 Jun 2025",
            "20 Sep 2025",
            "16-19 Nov 2025",
-           "12 Apr 2025"),
+           "12 Apr 2025",
+           "07 Apr 2025",
+           "1-4 Jun 2025"),
   
   conference = c("Phuse",
                   "Phuse",
@@ -82,26 +94,32 @@ locations <- data.frame(
                   "Phuse",
                   "Phuse",
                   "Phuse",
-                  "PharmaSUG")
+                  "PharmaSUG",
+                 "PharmaSUG",
+                 "PharmaSUG")
   ) 
 
 popupContent <- ~paste0(
   "<div style='font-family: Arial; font-size: 12px;'>",
   "<strong style='color: darkblue;'>City:</strong> ", city, "<br>",
-  "<strong style='color: darkgreen;'>Date:</strong> ", date, "<br>",
-  "<em>Description:</em> ", description,
-  "<em>Conference:</em> ", conference,
+  "<strong style='color: darkblue;'>Date:</strong> ", date, "<br>",
+  "<strong style='color: darkblue;'>Description:</strong> ", description,"<br>",
+  "<strong style='color: darkblue;'>Conference:</strong> ", conference,
   "</div>"
 )
 
-mymap <- leaflet(locations) %>%
-  addProviderTiles(providers$Esri.WorldStreetMap) %>%
+mymap <- leaflet(locations) |> 
+  addProviderTiles(providers$Esri.WorldStreetMap) |> 
   addCircleMarkers(
     ~longitude, ~latitude,
     popup = popupContent,
     label = ~city,
     radius = 5,
     color = ~ifelse(str_detect(conference,'Pharma'),'blue','red')
+  ) |> 
+  addControl(
+    "<h2 style='color: darkblue;'>Leaflet Map of Phuse and PharmaSUG Events in 2025</h2>", 
+    position = "topright"
   )
 
 
