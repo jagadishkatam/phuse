@@ -1,4 +1,4 @@
-# install.packages('maps')
+
 library(ggmap)
 library(maps)
 library(plotly)
