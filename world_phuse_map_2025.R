@@ -100,7 +100,7 @@ library(htmlwidgets)
 
 
 library(googlesheets4)
-location <- read_sheet("https://docs.google.com/spreadsheets/d/1y71M3LsU5HjdUetBFO1Rhy9Ws3rVfPHgA0AMmNb2KmQ/edit?gid=0#gid=0")
+locations <- read_sheet("https://docs.google.com/spreadsheets/d/1y71M3LsU5HjdUetBFO1Rhy9Ws3rVfPHgA0AMmNb2KmQ/edit?usp=sharing")
 
 
 popupContent <- ~paste0(
