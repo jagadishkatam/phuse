@@ -18,9 +18,9 @@ This project showcases an interactive **Leaflet map** displaying the locations o
 Check out the live map here:  
 [PhUSE and PharmaSUG 2025 Conference Map](https://jagadishkatam.github.io/phuse/phuse_map_2025.html)
 
-[Image of the Map](images/img1.png)
+![Image of the Map](images/img1.png)
 
-[Image of the Map with Label](images/img2.png)
+![Image of the Map with Label](images/img2.png)
 
 ##  **Technologies Used:**
 - **R** with **Leaflet package**
