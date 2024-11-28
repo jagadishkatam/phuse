@@ -100,6 +100,7 @@ library(htmlwidgets)
 
 
 library(googlesheets4)
+gs4_deauth()
 locations <- read_sheet("https://docs.google.com/spreadsheets/d/1y71M3LsU5HjdUetBFO1Rhy9Ws3rVfPHgA0AMmNb2KmQ/edit?usp=sharing")
 
 
