@@ -18,7 +18,7 @@ popupContent <- ~paste0(
   "<strong style='color: darkblue;'>Description:</strong> ", description,"<br>",
   "<strong style='color: darkblue;'>Conference:</strong> ", conference,
   "</div>"
-)
+) 
 
 mymap <- leaflet(locations) |> 
   addTiles(options = tileOptions(noWrap = TRUE)) |> 
