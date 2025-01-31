@@ -44,7 +44,7 @@ mymap <- leaflet(locations) |>
   )
 
 # save the map in html format
-saveWidget(mymap, "phuse_map_2025.html")
+saveWidget(mymap, "phuse_map_2025.html" )
 
 
 
