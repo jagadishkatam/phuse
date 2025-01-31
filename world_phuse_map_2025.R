@@ -43,7 +43,7 @@ mymap <- leaflet(locations) |>
     position = "topright"
   )
 
-
+# save the map in html format 
 saveWidget(mymap, "phuse_map_2025.html")
 
 
